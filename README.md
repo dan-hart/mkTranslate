@@ -1,5 +1,7 @@
 # mkTranslate: support multi-language translation
 
+`python translate -s en -p ./convert.strings -d 'ru'`
+
 [中文文档](https://github.com/mythkiven/mkTranslate/blob/master/README_zh.md)
 
 **mkTranslate: Faster translation**
