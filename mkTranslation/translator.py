@@ -113,7 +113,8 @@ class mkTranslator(object):
             utils.printf('-----')
             line = f.readline()
         f = open(newfile,'w+')
-        f.write(txd)
+        #f.write(txd)
+        print(txd)
         f.close()
     def log(self,channel,dest):
         if(dest == 'zh-hant' or dest == 'zh-hans'):
@@ -162,7 +163,7 @@ class mkTranslator(object):
             self.write_tx(filepath,newFile,r"text",r"text",destination,sourcelanguage,channel)
         # oc:xx.string
         elif(fileType.lower() == 'strings'):
-            self.write_tx(filepath,newFile,r"=\s*\"(.+?)\"\s*;",'="'+'content'+'";',destination,sourcelanguage,channel)
+            self.write_tx(filepath,newFile,r"=\s*\"(.+?)\"\s*;",'= "'+'content'+'";',destination,sourcelanguage,channel)
         # java:xx.xml
         elif(fileType.lower() == 'xml'):
             self.write_tx(filepath,newFile,r">\s*(.+?)\s*</string>",'>'+'content'+'</string>',destination,sourcelanguage,channel)
