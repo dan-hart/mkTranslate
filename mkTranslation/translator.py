@@ -116,6 +116,7 @@ class mkTranslator(object):
         #f.write(txd)
         print(txd)
         f.close()
+
     def log(self,channel,dest):
         if(dest == 'zh-hant' or dest == 'zh-hans'):
             return
@@ -179,6 +180,7 @@ class mkTranslator(object):
                 line = f.readline()
             f.close()
             f = open(newFile,'w+')
-            f.write(txd)
+            #f.write(txd)
+            print(txd)
             f.close()
         utils.printf('translation completed,file saved in ['+newFile+']')
